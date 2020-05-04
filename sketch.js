@@ -39,8 +39,10 @@ function reset() {
   copsSpeed = 1;
   releaseRate = 40;
   acceleration = 5;
+  time = 0;
   hero = new Hero(width / 2, height - 150, acceleration, idle, toLeft, toRight);
   clearInterval(timer);
+  timer = setInterval(secondPassed, 1000);
   loop();
 }
 
@@ -73,8 +75,6 @@ function setup() {
   }
 
   reset();
-
-  timer = setInterval(secondPassed, 1000);
 }
 
 function draw() {
@@ -104,7 +104,6 @@ function draw() {
 
 function speedUp() {
   if (frameCount % 500 === 0) {
-    console.log("speed up");
     if (copsSpeed <= 15) {
       copsSpeed++;
     }
@@ -113,8 +112,6 @@ function speedUp() {
 
 function releaseMore() {
   if (frameCount % 1000 === 0) {
-    console.log("release");
-
     if (acceleration < 10) {
       acceleration++;
       hero.setAcceleration(acceleration);
