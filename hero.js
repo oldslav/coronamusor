@@ -20,10 +20,10 @@ class Hero {
   update() {
     this.index += 0.3;
     const index = floor(this.index) % this.len;
-    if (keyIsDown(LEFT_ARROW) && hero.body.x >= 0 + 20) {
+    if (keyIsDown(LEFT_ARROW) && hero.body.x >= 72) {
       image(this.left[index], this.body.x, this.body.y, 32, 64);
       this.move(-1);
-    } else if (keyIsDown(RIGHT_ARROW) && hero.body.x <= width - 20) {
+    } else if (keyIsDown(RIGHT_ARROW) && hero.body.x <= width - 128) {
       image(this.right[index], this.body.x, this.body.y, 32, 64);
       this.move(1);
     } else {

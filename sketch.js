@@ -125,7 +125,7 @@ function releaseMore() {
 
 function convay() {
   if (frameCount % releaseRate === 0 || frameCount === 1) {
-    cops.push(new Cop(random(64, width - 64), -64, copsSpeed, copMovement));
+    cops.push(new Cop(random(32, width - 32), -64, copsSpeed, copMovement));
   }
 }
 
