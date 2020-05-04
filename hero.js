@@ -30,9 +30,4 @@ class Hero {
       image(this.idle[index], this.body.x, this.body.y, 32, 64);
     }
   }
-
-  show() {
-    // const index = floor(this.index) % this.len;
-    // image(this.idle[index], this.body.x, this.body.y, 32, 64);
-  }
 }
